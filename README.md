@@ -1,3 +1,10 @@
+```
+- 修改一些默认的特征字符串
+- 补充静态匹配规则
+```
+
+---
+
 # crawlergo
 
 ![chromedp](https://img.shields.io/badge/chromedp-v0.5.2-brightgreen.svg) [![BlackHat EU Arsenal](https://img.shields.io/badge/BlackHat%20Europe-2021%20Arsenal-blue.svg)](https://www.blackhat.com/eu-21/arsenal/schedule/index.html#crawlergo-a-powerful-browser-crawler-for-web-vulnerability-scanners-25113)

@@ -281,7 +281,7 @@ func (s *SmartFilter) markParamValue(paramMap map[string]interface{}, req model.
 			continue
 		}
 		// Crawlergo 为特定字符，说明此参数位置为数值型，非逻辑型，记录下此参数，全局过滤
-		if strings.Contains(valueStr, "Crawlergo") {
+		if strings.Contains(valueStr, "zhang3li4") {
 			name := req.URL.Hostname() + req.URL.Path + req.Method + key
 			s.filterLocationSet.Add(name)
 			markedParamMap[key] = CustomValueMark

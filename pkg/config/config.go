@@ -7,15 +7,15 @@ import (
 )
 
 const (
-	DefaultUA               = "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.0 Safari/537.36"
+	DefaultUA               = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.123 Safari/537.36"
 	MaxTabsCount            = 10
 	TabRunTimeout           = 20 * time.Second
-	DefaultInputText        = "Crawlergo"
-	FormInputKeyword        = "Crawlergo"
+	DefaultInputText        = "zhang3li4"
+	FormInputKeyword        = "zhang3li4"
 	SuspectURLRegex         = `(?:"|')(((?:[a-zA-Z]{1,10}://|//)[^"'/]{1,}\.[a-zA-Z]{2,}[^"']{0,})|((?:/|\.\./|\./)[^"'><,;|*()(%%$^/\\\[\]][^"'><,;|()]{1,})|([a-zA-Z0-9_\-/]{1,}/[a-zA-Z0-9_\-/]{1,}\.(?:[a-zA-Z]{1,4}|action)(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-/]{1,}/[a-zA-Z0-9_\-/]{3,}(?:[\?|#][^"|']{0,}|))|([a-zA-Z0-9_\-]{1,}\.(?:php|asp|aspx|jsp|json|action|html|js|txt|xml)(?:[\?|#][^"|']{0,}|)))(?:"|')`
 	URLRegex                = `((https?|ftp|file):)?//[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
 	AttrURLRegex            = ``
-	DomContentLoadedTimeout = 5 * time.Second
+	DomContentLoadedTimeout = 6 * time.Second
 	EventTriggerInterval    = 100 * time.Millisecond // 单位毫秒
 	BeforeExitDelay         = 1 * time.Second
 	DefaultEventTriggerMode = EventTriggerAsync
@@ -75,13 +75,17 @@ const (
 
 var (
 	StaticSuffix = []string{
-		"png", "gif", "jpg", "mp4", "mp3", "mng", "pct", "bmp", "jpeg", "pst", "psp", "ttf",
-		"tif", "tiff", "ai", "drw", "wma", "ogg", "wav", "ra", "aac", "mid", "au", "aiff",
+		"ai", "apk", "asf", "asx", "cab", "crt", "dat", "dll", "dmg", "drw", "dxf", "eps",
+		"exif", "gz2", "iso", "m4a", "m4v", "map", "mng", "mov", "odg", "ogg", "pct", "ps",
+		"psp", "pst", "qt", "rmvb", "rss", "txt", "wma", "wmv", "wps", "xsl", "vue", "md",
+		"3g2", "7z", "aif", "aifc", "abw", "png", "gif", "jpg", "mp4", "mp3", "mng", "pct",
+		"bmp", "jpeg", "pst", "psp", "ttf", "tif", "tiff", "ai", "drw", "wma", "ogg", "wav",
 		"dxf", "eps", "ps", "svg", "3gp", "asf", "asx", "avi", "mov", "mpg", "qt", "rm",
 		"wmv", "m4a", "bin", "xls", "xlsx", "ppt", "pptx", "doc", "docx", "odt", "ods", "odg",
 		"odp", "exe", "zip", "rar", "tar", "gz", "iso", "rss", "pdf", "txt", "dll", "ico",
 		"gz2", "apk", "crt", "woff", "map", "woff2", "webp", "less", "dmg", "bz2", "otf", "swf",
-		"flv", "mpeg", "dat", "xsl", "csv", "cab", "exif", "wps", "m4v", "rmvb",
+		"flv", "mpeg", "dat", "xsl", "csv", "cab", "exif", "wps", "m4v", "rmvb", "ra", "aac",
+		"mid", "au", "aiff",
 	}
 	StaticSuffixSet mapset.Set
 )
@@ -101,7 +105,7 @@ type ContinueResourceList []string
 var InputTextMap = map[string]map[string]interface{}{
 	"mail": {
 		"keyword": []string{"mail"},
-		"value":   "crawlergo@gmail.com",
+		"value":   "zhang3li4@gmail.com",
 	},
 	"code": {
 		"keyword": []string{"yanzhengma", "code", "ver", "captcha"},
@@ -113,11 +117,11 @@ var InputTextMap = map[string]map[string]interface{}{
 	},
 	"username": {
 		"keyword": []string{"name", "user", "id", "login", "account"},
-		"value":   "crawlergo@gmail.com",
+		"value":   "zhang3li4@gmail.com",
 	},
 	"password": {
 		"keyword": []string{"pass", "pwd"},
-		"value":   "Crawlergo6.",
+		"value":   "zhang3li46.",
 	},
 	"qq": {
 		"keyword": []string{"qq", "wechat", "tencent", "weixin"},
@@ -129,7 +133,7 @@ var InputTextMap = map[string]map[string]interface{}{
 	},
 	"url": {
 		"keyword": []string{"url", "site", "web", "blog", "link"},
-		"value":   "https://crawlergo.nice.cn/",
+		"value":   "https://zhang3li4.example.com/",
 	},
 	"date": {
 		"keyword": []string{"date", "time", "year", "now"},

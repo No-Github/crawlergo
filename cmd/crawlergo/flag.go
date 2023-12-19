@@ -62,7 +62,7 @@ func SetCustomHeaders() *cli.StringFlag {
 	return &cli.StringFlag{
 		Name:        "custom-headers",
 		Usage:       "add additional `Headers` to each request. The input string will be called json.Unmarshal",
-		Value:       fmt.Sprintf(`{"Spider-Name": "crawlergo", "User-Agent": "%s"}`, config.DefaultUA),
+		Value:       fmt.Sprintf(`{"User-Agent": "%s"}`, config.DefaultUA),
 		Destination: &taskConfig.ExtraHeadersString,
 	}
 }
