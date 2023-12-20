@@ -8,7 +8,7 @@ import (
 
 const (
 	DefaultUA               = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.123 Safari/537.36"
-	MaxTabsCount            = 10
+	MaxTabsCount            = 8
 	TabRunTimeout           = 20 * time.Second
 	DefaultInputText        = "zhang3li4"
 	FormInputKeyword        = "zhang3li4"
